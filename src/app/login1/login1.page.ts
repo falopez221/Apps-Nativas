@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Login1Service } from './login1.service';
 
 @Component({
   selector: 'app-login1',
@@ -10,8 +11,23 @@ export class Login1Page implements OnInit {
 showpassword = false;
 passowrdtgi = "eye";
 
-  constructor() { }
+public name: any;
+  public mail: any;
+  public password: any;
+  public datosenviados: any=[];
 
+
+  constructor(private registroService: Login1Service) { }
+
+registrar(){
+  this.datosenviados=[];
+     this.datosenviados.push(this.name,this.mail,this.password);
+
+  this.registroService.insertarusuario(this.datosenviados).subscribe(data =>{
+    
+    console.log(data);
+    })
+}
   togglepassword():void{
     this.showpassword = !this.showpassword;
 
@@ -45,4 +61,12 @@ passowrdtgi = "eye";
   }
 
 
+
 }
+
+
+
+
+
+
+

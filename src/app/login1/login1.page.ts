@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Login1Service } from './login1.service';
-
+import { RegistroService } from './login1.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login1',
   templateUrl: './login1.page.html',
@@ -11,22 +11,21 @@ export class Login1Page implements OnInit {
 showpassword = false;
 passowrdtgi = "eye";
 
+public Perfil: any;
 public name: any;
-  public mail: any;
-  public password: any;
-  public datosenviados: any=[];
+public mail: any;
+public password: any;
+public datosEnviados: any=[];
 
+  constructor(private registroService: RegistroService, private router: Router) { }
 
-  constructor(private registroService: Login1Service) { }
-
-registrar(){
-  this.datosenviados=[];
-     this.datosenviados.push(this.name,this.mail,this.password);
-
-  this.registroService.insertarusuario(this.datosenviados).subscribe(data =>{
+registrarUsuarioComun(){
+  this.datosEnviados=[];
+  this.datosEnviados.push(this.name,this.mail,this.password)
+  this.registroService.insertarUsuarioComun(this.datosEnviados).subscribe(data =>{
+  console.log(data);
+  })
     
-    console.log(data);
-    })
 }
   togglepassword():void{
     this.showpassword = !this.showpassword;

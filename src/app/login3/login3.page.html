@@ -20,8 +20,19 @@
 
   <ion-item class="mail">
     
-    <ion-input class="mailtext" [(ngModel)]="mail"    placeholder="Mail/Numero de telefono"> </ion-input>
+    <ion-input class="mailtext" [(ngModel)]="mail"    placeholder="Mail"> </ion-input>
   </ion-item>
+
+  <ion-item class="cuit">
+    
+    <ion-input class="mailtext" [(ngModel)]="cuit"    placeholder="CUIT"> </ion-input>
+  </ion-item>
+
+  <ion-item class="numerofono">
+    
+    <ion-input class="mailtext" [(ngModel)]="fono"    placeholder="Numero de telefono"> </ion-input>
+  </ion-item>
+
 
   <ion-item class="password">
     
@@ -44,7 +55,7 @@
    
 
 
-<ion-button class="confirm" color="" (click)="registrarUsuarioComun()">registrarme</ion-button>
+<ion-button class="confirm" color="" (click)="registrar()">registrarme</ion-button>
 
 
 

@@ -4,15 +4,15 @@ import {HttpClient} from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
-export class Login1Service {
+export class RegistroService {
 
   constructor(private http: HttpClient) { }
 
 
 
-insertarusuario(datosenviados){
+insertarUsuarioComun(datosEnviados){
  
-  return this.http.post('http://localhost:3001/url',{datosenviados});
+  return this.http.post('http://localhost:3001/insertar_usuario_comun',{datosEnviados});
 
   }
   

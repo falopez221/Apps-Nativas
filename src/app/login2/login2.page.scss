@@ -1,0 +1,53 @@
+ion-content{
+
+    --ion-background-color:#C599FF;
+}
+
+.input{
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    width: 278px;
+    height: 45px;
+    --background: #ffffff;
+    overflow: hidden;
+    border-radius: 26px;
+    z-index: 2;
+  }
+
+  .inputtext{
+    color: #1f1f1f;
+  }
+
+.mid{
+    top: 20%;
+    left: 12%;
+    position: absolute;
+    width: 302px;
+  height: 24px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-family: "Inter", sans-serif;
+  color: #1f1f1f;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1.2;
+}
+
+.top{
+    left: 23%;
+    top: 10%;
+    position: absolute;
+    width: 192px;
+  height: 24px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-family: "Inter", sans-serif;
+  color: #1f1f1f;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1.2;
+}
+

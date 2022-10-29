@@ -5,7 +5,7 @@ ion-content{
 
 
 .top{
-    left: 23%;
+    left: 26%;
     top: 17%;
     position: absolute;
     width: 192px;
@@ -80,3 +80,43 @@ ion-content{
    overflow: hidden;
    border-radius: 26px;
  }
+
+
+ .usuariocomun{
+  position: absolute;
+  top: 23%;
+  left: 10%;
+  width: 295px;
+  height: 70px;
+  --background: #ffffff;
+  overflow: hidden;
+  border-radius: 26px;
+  z-index: 2;
+ }
+
+ .restoran{
+  position: absolute;
+  top: 34%;
+  left: 10%;
+  width: 295px;
+  height: 70px;
+  --background: #ffffff;
+  overflow: hidden;
+  border-radius: 26px;
+  z-index: 2;
+ }
+
+
+
+ .textuser {
+  width: 207px;
+  height: 24px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-family: "Inter", sans-serif;
+  color: #535353;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1.2;
+}

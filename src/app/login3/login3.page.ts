@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistroService } from './login3.service';
+
 
 @Component({
   selector: 'app-login3',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Login3Page implements OnInit {
 
-  constructor() { }
+  public Perfil: any;
+  public name: any;
+  public mail: any;
+  public password: any;
+  public cuit: any;
+  public teleono: any;
+  public datosEnviados: any=[];
+
+
+  constructor(private registroService: RegistroService) { }
 
 
   
@@ -17,8 +28,12 @@ export class Login3Page implements OnInit {
 
  
 
+  registrarLocal(){
+    this.datosEnviados=[];
+    this.datosEnviados.push(this.name,this.mail,this.password)
+    this.registroService.insertarLocalComercial(this.datosEnviados).subscribe(data =>{
+    console.log(data);
+    })
 
-
-
-
+  }
 }

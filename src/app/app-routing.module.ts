@@ -29,7 +29,12 @@ const routes: Routes = [
   {
     path: 'login4',
     loadChildren: () => import('./login4/login4.module').then( m => m.Login4PageModule)
-  }
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then( m => m.MainPageModule)
+  },
+ 
   
 
 ];
